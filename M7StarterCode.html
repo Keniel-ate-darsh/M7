@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 7 - The DOM</title>
+    <script src="M7.js" defer></script>
+</head>
+<body>
+    <main id="main">Main Element</main><br>
+    <div class="grandparent">grandma/grandpa (grandparent)
+        <section class="parent">Section 1 - Parent 1 (parentOne)
+            <p class="child">Section 1 Paragraph 1 (childOne)</p>
+            <p class="child">Section 1 Paragraph 2 (childTwo)</p>
+        </section>
+        <section class="parent">Section 2 - Parent 2 (parentTwo)
+            <p class="child">Section 2 Paragraph 1</p>
+            <p class="child">Section 2 Paragraph 2</p>
+        </section>
+    <br>
+    </div>
+    <!-- This <style> creates the CSS box structure to help visualize our node relationships -->
+    <style>
+        .grandparent {
+    border: 4px solid black;
+    padding: 20px;
+    width: 500px;
+    margin: 20px auto;
+    position: relative; 
+  }
+  
+  .parent {
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .child {
+    border: 2px solid green;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  .grandparent::before {
+    content: "Grandparent";
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 2px 5px;
+    font-size: 0.8em;
+  }
+  
+    </style>
+</body>
+</html>
